@@ -8,10 +8,15 @@
 import SwiftUI
 
 @main
-struct fisherAppApp: App {
+struct fisherAppApp:  App {
+    
+    
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+           
+            CameraView()
+
         }
     }
 }

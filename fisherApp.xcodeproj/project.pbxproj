@@ -7,16 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240468052C24315B00EC9935 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468042C24315B00EC9935 /* CameraView.swift */; };
+		240468072C24384900EC9935 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468062C24384900EC9935 /* test.swift */; };
+		240468092C2462FC00EC9935 /* FishDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 240468082C2462FC00EC9935 /* FishDetector.mlmodel */; };
+		2404680B2C24670B00EC9935 /* AnalyseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404680A2C24670B00EC9935 /* AnalyseView.swift */; };
+		2404680F2C247B1B00EC9935 /* ImageToPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404680E2C247B1B00EC9935 /* ImageToPixelBuffer.swift */; };
+		240468112C25649200EC9935 /* FishDetectorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468102C25649200EC9935 /* FishDetectorModel.swift */; };
 		24F0A7732C21B1B100FDBAED /* fisherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0A7722C21B1B100FDBAED /* fisherAppApp.swift */; };
-		24F0A7752C21B1B100FDBAED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0A7742C21B1B100FDBAED /* ContentView.swift */; };
 		24F0A7772C21B1B300FDBAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F0A7762C21B1B300FDBAED /* Assets.xcassets */; };
 		24F0A77A2C21B1B300FDBAED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F0A7792C21B1B300FDBAED /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240468042C24315B00EC9935 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		240468062C24384900EC9935 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		240468082C2462FC00EC9935 /* FishDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FishDetector.mlmodel; sourceTree = "<group>"; };
+		2404680A2C24670B00EC9935 /* AnalyseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyseView.swift; sourceTree = "<group>"; };
+		2404680E2C247B1B00EC9935 /* ImageToPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToPixelBuffer.swift; sourceTree = "<group>"; };
+		240468102C25649200EC9935 /* FishDetectorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishDetectorModel.swift; sourceTree = "<group>"; };
 		24F0A76F2C21B1B100FDBAED /* fisherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fisherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F0A7722C21B1B100FDBAED /* fisherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fisherAppApp.swift; sourceTree = "<group>"; };
-		24F0A7742C21B1B100FDBAED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		24F0A7762C21B1B300FDBAED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24F0A7792C21B1B300FDBAED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,9 +42,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		240467D22C21C9E300EC9935 /* MLModels */ = {
+			isa = PBXGroup;
+			children = (
+				240468082C2462FC00EC9935 /* FishDetector.mlmodel */,
+			);
+			path = MLModels;
+			sourceTree = "<group>";
+		};
+		240467D42C21C9E300EC9935 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				240467D22C21C9E300EC9935 /* MLModels */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		240467DB2C21C9EA00EC9935 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				240468042C24315B00EC9935 /* CameraView.swift */,
+				2404680A2C24670B00EC9935 /* AnalyseView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		240467E02C21C9F100EC9935 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2404680E2C247B1B00EC9935 /* ImageToPixelBuffer.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		240467E22C21CA5900EC9935 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				24F0A7762C21B1B300FDBAED /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		240467FF2C22C7BE00EC9935 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				240468102C25649200EC9935 /* FishDetectorModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		24F0A7662C21B1B100FDBAED = {
 			isa = PBXGroup;
 			children = (
+				240468062C24384900EC9935 /* test.swift */,
 				24F0A7712C21B1B100FDBAED /* fisherApp */,
 				24F0A7702C21B1B100FDBAED /* Products */,
 			);
@@ -51,9 +111,12 @@
 		24F0A7712C21B1B100FDBAED /* fisherApp */ = {
 			isa = PBXGroup;
 			children = (
+				240467FF2C22C7BE00EC9935 /* Models */,
+				240467E22C21CA5900EC9935 /* Assets */,
 				24F0A7722C21B1B100FDBAED /* fisherAppApp.swift */,
-				24F0A7742C21B1B100FDBAED /* ContentView.swift */,
-				24F0A7762C21B1B300FDBAED /* Assets.xcassets */,
+				240467E02C21C9F100EC9935 /* Utilities */,
+				240467DB2C21C9EA00EC9935 /* Views */,
+				240467D42C21C9E300EC9935 /* Resources */,
 				24F0A7782C21B1B300FDBAED /* Preview Content */,
 			);
 			path = fisherApp;
@@ -137,7 +200,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24F0A7752C21B1B100FDBAED /* ContentView.swift in Sources */,
+				240468092C2462FC00EC9935 /* FishDetector.mlmodel in Sources */,
+				2404680F2C247B1B00EC9935 /* ImageToPixelBuffer.swift in Sources */,
+				2404680B2C24670B00EC9935 /* AnalyseView.swift in Sources */,
+				240468072C24384900EC9935 /* test.swift in Sources */,
+				240468112C25649200EC9935 /* FishDetectorModel.swift in Sources */,
+				240468052C24315B00EC9935 /* CameraView.swift in Sources */,
 				24F0A7732C21B1B100FDBAED /* fisherAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +343,16 @@
 				DEVELOPMENT_TEAM = 3NM5QV7PF3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = fisherApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = camera;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = more;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = photo;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +377,16 @@
 				DEVELOPMENT_TEAM = 3NM5QV7PF3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = fisherApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = camera;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = more;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = photo;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
