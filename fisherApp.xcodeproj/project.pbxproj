@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		240468052C24315B00EC9935 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468042C24315B00EC9935 /* CameraView.swift */; };
-		240468072C24384900EC9935 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468062C24384900EC9935 /* test.swift */; };
 		240468092C2462FC00EC9935 /* FishDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 240468082C2462FC00EC9935 /* FishDetector.mlmodel */; };
 		2404680B2C24670B00EC9935 /* AnalyseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404680A2C24670B00EC9935 /* AnalyseView.swift */; };
 		2404680F2C247B1B00EC9935 /* ImageToPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404680E2C247B1B00EC9935 /* ImageToPixelBuffer.swift */; };
 		240468112C25649200EC9935 /* FishDetectorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468102C25649200EC9935 /* FishDetectorModel.swift */; };
+		240468382C2979EB00EC9935 /* dataFish.json in Resources */ = {isa = PBXBuildFile; fileRef = 240468372C2979EB00EC9935 /* dataFish.json */; };
+		2404683A2C297CB000EC9935 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468392C297CB000EC9935 /* HomeView.swift */; };
+		2404683C2C29818E00EC9935 /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404683B2C29818E00EC9935 /* Fish.swift */; };
+		2404683E2C299A6F00EC9935 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404683D2C299A6F00EC9935 /* Breed.swift */; };
+		240468402C29A6DC00EC9935 /* FishDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404683F2C29A6DC00EC9935 /* FishDetail.swift */; };
 		24F0A7732C21B1B100FDBAED /* fisherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0A7722C21B1B100FDBAED /* fisherAppApp.swift */; };
 		24F0A7772C21B1B300FDBAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F0A7762C21B1B300FDBAED /* Assets.xcassets */; };
 		24F0A77A2C21B1B300FDBAED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F0A7792C21B1B300FDBAED /* Preview Assets.xcassets */; };
@@ -20,11 +24,15 @@
 
 /* Begin PBXFileReference section */
 		240468042C24315B00EC9935 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		240468062C24384900EC9935 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		240468082C2462FC00EC9935 /* FishDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FishDetector.mlmodel; sourceTree = "<group>"; };
 		2404680A2C24670B00EC9935 /* AnalyseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyseView.swift; sourceTree = "<group>"; };
 		2404680E2C247B1B00EC9935 /* ImageToPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToPixelBuffer.swift; sourceTree = "<group>"; };
 		240468102C25649200EC9935 /* FishDetectorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishDetectorModel.swift; sourceTree = "<group>"; };
+		240468372C2979EB00EC9935 /* dataFish.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dataFish.json; sourceTree = "<group>"; };
+		240468392C297CB000EC9935 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2404683B2C29818E00EC9935 /* Fish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
+		2404683D2C299A6F00EC9935 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		2404683F2C29A6DC00EC9935 /* FishDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishDetail.swift; sourceTree = "<group>"; };
 		24F0A76F2C21B1B100FDBAED /* fisherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fisherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F0A7722C21B1B100FDBAED /* fisherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fisherAppApp.swift; sourceTree = "<group>"; };
 		24F0A7762C21B1B300FDBAED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +71,8 @@
 			children = (
 				240468042C24315B00EC9935 /* CameraView.swift */,
 				2404680A2C24670B00EC9935 /* AnalyseView.swift */,
+				240468392C297CB000EC9935 /* HomeView.swift */,
+				2404683F2C29A6DC00EC9935 /* FishDetail.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -87,14 +97,23 @@
 			isa = PBXGroup;
 			children = (
 				240468102C25649200EC9935 /* FishDetectorModel.swift */,
+				2404683B2C29818E00EC9935 /* Fish.swift */,
+				2404683D2C299A6F00EC9935 /* Breed.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		240468362C2979C100EC9935 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				240468372C2979EB00EC9935 /* dataFish.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		24F0A7662C21B1B100FDBAED = {
 			isa = PBXGroup;
 			children = (
-				240468062C24384900EC9935 /* test.swift */,
 				24F0A7712C21B1B100FDBAED /* fisherApp */,
 				24F0A7702C21B1B100FDBAED /* Products */,
 			);
@@ -111,6 +130,7 @@
 		24F0A7712C21B1B100FDBAED /* fisherApp */ = {
 			isa = PBXGroup;
 			children = (
+				240468362C2979C100EC9935 /* Data */,
 				240467FF2C22C7BE00EC9935 /* Models */,
 				240467E22C21CA5900EC9935 /* Assets */,
 				24F0A7722C21B1B100FDBAED /* fisherAppApp.swift */,
@@ -190,6 +210,7 @@
 			files = (
 				24F0A77A2C21B1B300FDBAED /* Preview Assets.xcassets in Resources */,
 				24F0A7772C21B1B300FDBAED /* Assets.xcassets in Resources */,
+				240468382C2979EB00EC9935 /* dataFish.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,12 +222,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				240468092C2462FC00EC9935 /* FishDetector.mlmodel in Sources */,
+				2404683A2C297CB000EC9935 /* HomeView.swift in Sources */,
+				240468402C29A6DC00EC9935 /* FishDetail.swift in Sources */,
 				2404680F2C247B1B00EC9935 /* ImageToPixelBuffer.swift in Sources */,
 				2404680B2C24670B00EC9935 /* AnalyseView.swift in Sources */,
-				240468072C24384900EC9935 /* test.swift in Sources */,
 				240468112C25649200EC9935 /* FishDetectorModel.swift in Sources */,
 				240468052C24315B00EC9935 /* CameraView.swift in Sources */,
 				24F0A7732C21B1B100FDBAED /* fisherAppApp.swift in Sources */,
+				2404683E2C299A6F00EC9935 /* Breed.swift in Sources */,
+				2404683C2C29818E00EC9935 /* Fish.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

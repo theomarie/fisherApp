@@ -45,6 +45,6 @@ struct AnalyseView: View {
     }
 }
 
-/* #Preview {
+#Preview {
     AnalyseView(fishImg: .constant(UIImage(named: "image1")))
-} */
+}

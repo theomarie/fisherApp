@@ -15,7 +15,8 @@ struct fisherAppApp:  App {
     var body: some Scene {
         WindowGroup {
            
-            CameraView()
+            //CameraView()
+            HomeView()
 
         }
     }
