@@ -25,26 +25,16 @@ struct HomeView: View {
 
     var body: some View {
         NavigationStack {
-            List(filteredFishes) { fish in
-                let index = fishes.firstIndex(where: {$0.id == fish.id})
-                NavigationLink(destination: FishDetail(fish:  $fishes[index!])) {
-                    HStack {
-                        Image(fish.picture)
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                            .clipShape(Circle())
-                        VStack(alignment: .leading) {
-                            Text(fish.title)
-                                .font(.headline)
-                            Text(fish.breed.name)
-                                .font(.subheadline)
-                            Text(fish.date)
-                                .font(.subheadline)
-                        }
-                        
-                    }
-                }
-            }
+           
+        
+             List(filteredFishes) { fish in
+                 let index = fishes.firstIndex(where: {$0.id == fish.id})
+                 NavigationLink(destination: FishDetail(fish:  $fishes[index!])) {
+                     FishRowView(fish: fish)
+                 }
+             }
+            
+            
             .searchable(text: $searchText, prompt: "Rechercher")
             .navigationBarTitle("Historique", displayMode: .large)
             .toolbar {
@@ -55,7 +45,7 @@ struct HomeView: View {
                         Image(systemName: "camera")
                     }.fullScreenCover(isPresented: $showCamera) {
                         accessCameraView(selectedImage: self.$selectedImage)
-                    .navigationDestination(item: $selectedImage) { image in
+                        .navigationDestination(item: $selectedImage) { image in
                                 AnalyseView(fishImg: $selectedImage)
                             }
                         
