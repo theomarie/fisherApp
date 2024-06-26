@@ -17,6 +17,11 @@
 		2404683C2C29818E00EC9935 /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404683B2C29818E00EC9935 /* Fish.swift */; };
 		2404683E2C299A6F00EC9935 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404683D2C299A6F00EC9935 /* Breed.swift */; };
 		240468402C29A6DC00EC9935 /* FishDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404683F2C29A6DC00EC9935 /* FishDetail.swift */; };
+		240468432C29BBF000EC9935 /* InformationIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468422C29BBF000EC9935 /* InformationIcon.swift */; };
+		240468462C2BF96100EC9935 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468452C2BF96100EC9935 /* ActivityView.swift */; };
+		240468482C2C023C00EC9935 /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468472C2C023C00EC9935 /* StatView.swift */; };
+		2404684A2C2C417700EC9935 /* ModaleTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468492C2C417700EC9935 /* ModaleTestView.swift */; };
+		2404684C2C2C486A00EC9935 /* TakePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404684B2C2C486A00EC9935 /* TakePictureView.swift */; };
 		24F0A7732C21B1B100FDBAED /* fisherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0A7722C21B1B100FDBAED /* fisherAppApp.swift */; };
 		24F0A7772C21B1B300FDBAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F0A7762C21B1B300FDBAED /* Assets.xcassets */; };
 		24F0A77A2C21B1B300FDBAED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F0A7792C21B1B300FDBAED /* Preview Assets.xcassets */; };
@@ -33,6 +38,11 @@
 		2404683B2C29818E00EC9935 /* Fish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
 		2404683D2C299A6F00EC9935 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		2404683F2C29A6DC00EC9935 /* FishDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishDetail.swift; sourceTree = "<group>"; };
+		240468422C29BBF000EC9935 /* InformationIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationIcon.swift; sourceTree = "<group>"; };
+		240468452C2BF96100EC9935 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		240468472C2C023C00EC9935 /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
+		240468492C2C417700EC9935 /* ModaleTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModaleTestView.swift; sourceTree = "<group>"; };
+		2404684B2C2C486A00EC9935 /* TakePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureView.swift; sourceTree = "<group>"; };
 		24F0A76F2C21B1B100FDBAED /* fisherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fisherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F0A7722C21B1B100FDBAED /* fisherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fisherAppApp.swift; sourceTree = "<group>"; };
 		24F0A7762C21B1B300FDBAED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,7 +82,9 @@
 				240468042C24315B00EC9935 /* CameraView.swift */,
 				2404680A2C24670B00EC9935 /* AnalyseView.swift */,
 				240468392C297CB000EC9935 /* HomeView.swift */,
+				240468492C2C417700EC9935 /* ModaleTestView.swift */,
 				2404683F2C29A6DC00EC9935 /* FishDetail.swift */,
+				2404684B2C2C486A00EC9935 /* TakePictureView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -111,6 +123,24 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		240468412C29BBB600EC9935 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				240468442C2BF94000EC9935 /* FishDetail */,
+				240468422C29BBF000EC9935 /* InformationIcon.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		240468442C2BF94000EC9935 /* FishDetail */ = {
+			isa = PBXGroup;
+			children = (
+				240468452C2BF96100EC9935 /* ActivityView.swift */,
+				240468472C2C023C00EC9935 /* StatView.swift */,
+			);
+			path = FishDetail;
+			sourceTree = "<group>";
+		};
 		24F0A7662C21B1B100FDBAED = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +160,7 @@
 		24F0A7712C21B1B100FDBAED /* fisherApp */ = {
 			isa = PBXGroup;
 			children = (
+				240468412C29BBB600EC9935 /* Components */,
 				240468362C2979C100EC9935 /* Data */,
 				240467FF2C22C7BE00EC9935 /* Models */,
 				240467E22C21CA5900EC9935 /* Assets */,
@@ -222,9 +253,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				240468092C2462FC00EC9935 /* FishDetector.mlmodel in Sources */,
+				240468432C29BBF000EC9935 /* InformationIcon.swift in Sources */,
+				2404684A2C2C417700EC9935 /* ModaleTestView.swift in Sources */,
 				2404683A2C297CB000EC9935 /* HomeView.swift in Sources */,
 				240468402C29A6DC00EC9935 /* FishDetail.swift in Sources */,
 				2404680F2C247B1B00EC9935 /* ImageToPixelBuffer.swift in Sources */,
+				240468482C2C023C00EC9935 /* StatView.swift in Sources */,
+				240468462C2BF96100EC9935 /* ActivityView.swift in Sources */,
+				2404684C2C2C486A00EC9935 /* TakePictureView.swift in Sources */,
 				2404680B2C24670B00EC9935 /* AnalyseView.swift in Sources */,
 				240468112C25649200EC9935 /* FishDetectorModel.swift in Sources */,
 				240468052C24315B00EC9935 /* CameraView.swift in Sources */,

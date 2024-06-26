@@ -11,69 +11,77 @@ struct HomeView: View {
     
     @State private var searchText: String = ""
     @State private var fishes: [Fish] = []
+    @State private var showCamera = false
+    @State var selectedImage: UIImage?
+
     
     var filteredFishes: [Fish] {
-            if searchText.isEmpty {
-                return fishes
-            } else {
-                return fishes.filter { $0.title.contains(searchText) || $0.race.contains(searchText) }
-            }
+        if searchText.isEmpty {
+            return fishes
+        } else {
+            return fishes.filter { $0.title.contains(searchText) || $0.breed.name.contains(searchText) }
         }
+    }
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(filteredFishes) { fish in
-                            HStack {
-                                Image(fish.picture)
-                                    .resizable()
-                                    .frame(width: 50, height: 50)
-                                    .clipShape(Circle())
-                                VStack(alignment: .leading) {
-                                    Text(fish.title)
-                                        .font(.headline)
-                                    Text(fish.race)
-                                        .font(.subheadline)
-                                    Text(fish.date)
-                                        .font(.subheadline)
-                                   
-                                }
-                                Spacer()
-                                Image(systemName: "control")
-                                    .rotationEffect(Angle(degrees: 90.0))
-                            }
+                let index = fishes.firstIndex(where: {$0.id == fish.id})
+                NavigationLink(destination: FishDetail(fish:  $fishes[index!])) {
+                    HStack {
+                        Image(fish.picture)
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                            .clipShape(Circle())
+                        VStack(alignment: .leading) {
+                            Text(fish.title)
+                                .font(.headline)
+                            Text(fish.breed.name)
+                                .font(.subheadline)
+                            Text(fish.date)
+                                .font(.subheadline)
                         }
-            .searchable(text: $searchText, prompt: "Rechercher")
-                        .navigationBarTitle("Historique", displayMode: .large)
+                        
+                    }
                 }
-                .navigationViewStyle(StackNavigationViewStyle())
-                .onAppear(perform: loadFishes)
-            
-    }
-    
-    
-    func loadFishes() {
-            guard let url = Bundle.main.url(forResource: "dataFish", withExtension: "json") else {
-                print("JSON file not found")
-                return
             }
-            
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                fishes = try decoder.decode([Fish].self, from: data)
-            } catch {
-                print("Error loading JSON: \(error)")
+            .searchable(text: $searchText, prompt: "Rechercher")
+            .navigationBarTitle("Historique", displayMode: .large)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        self.showCamera.toggle()
+                    }) {
+                        Image(systemName: "camera")
+                    }.fullScreenCover(isPresented: $showCamera) {
+                        accessCameraView(selectedImage: self.$selectedImage)
+                    .navigationDestination(item: $selectedImage) { image in
+                                AnalyseView(fishImg: $selectedImage)
+                            }
+                        
+                    }
+                }
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .onAppear(perform: loadFishes)
+    }
     
+    func loadFishes() {
+        guard let url = Bundle.main.url(forResource: "dataFish", withExtension: "json") else {
+            print("JSON file not found")
+            return
+        }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            fishes = try decoder.decode([Fish].self, from: data)
+        } catch {
+            print("Error loading JSON: \(error)")
+        }
+    }
 }
-
-
-
-
-
-
-
 
 #Preview {
     HomeView()

@@ -1,122 +1,264 @@
 [
   {
-    "title": "Salmon",
-    "race": "Atlantic",
+    "title": "King Salmon",
+    "breed": {
+      "name": "Salmon",
+      "minSize": 20.0,
+      "maxSize": 150.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-06-15",
-    "picture": "Bangus91"
+    "picture": "Bangus91",
+    "size": 45.5
   },
   {
-    "title": "Tuna",
-    "race": "Yellowfin",
+    "title": "Giant Tuna",
+    "breed": {
+      "name": "Tuna",
+      "minSize": 30.0,
+      "maxSize": 250.0,
+      "fishable": true,
+      "storageTemp": "0-5°C"
+    },
     "date": "2023-07-20",
-    "picture": "Gold Fish42"
+    "picture": "Gold Fish42",
+    "size": 75.0
   },
   {
-    "title": "Cod",
-    "race": "Pacific",
+    "title": "Pacific Cod",
+    "breed": {
+      "name": "Cod",
+      "minSize": 50.0,
+      "maxSize": 180.0,
+      "fishable": true,
+      "storageTemp": "-1 à 1°C"
+    },
     "date": "2023-05-12",
-    "picture": "Picture1020"
+    "picture": "Picture1020",
+    "size": 44.2
   },
   {
-    "title": "Trout",
-    "race": "Rainbow",
+    "title": "Rainbow Trout",
+    "breed": {
+      "name": "Trout",
+      "minSize": 15.0,
+      "maxSize": 70.0,
+      "fishable": false,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-08-01",
-    "picture": "Pangasius12"
+    "picture": "Pangasius12",
+    "size": 40.0
   },
   {
-    "title": "Bass",
-    "race": "Largemouth",
+    "title": "Largemouth Bass",
+    "breed": {
+      "name": "Bass",
+      "minSize": 25.0,
+      "maxSize": 75.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-06-30",
-    "picture": "Long-SnoutedPipefish12"
+    "picture": "Long-SnoutedPipefish12",
+    "size": 55.3
   },
   {
-    "title": "Catfish",
-    "race": "Channel",
+    "title": "Channel Catfish",
+    "breed": {
+      "name": "Catfish",
+      "minSize": 30.0,
+      "maxSize": 100.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-07-15",
-    "picture": "Bangus96"
+    "picture": "Bangus96",
+    "size": 22.2
   },
   {
-    "title": "Mackerel",
-    "race": "King",
+    "title": "King Mackerel",
+    "breed": {
+      "name": "Mackerel",
+      "minSize": 40.0,
+      "maxSize": 100.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-09-05",
-    "picture": "Gold Fish45"
+    "picture": "Gold Fish45",
+    "size": 48.0
   },
   {
-    "title": "Snapper",
-    "race": "Red",
+    "title": "Red Snapper",
+    "breed": {
+      "name": "Snapper",
+      "minSize": 20.0,
+      "maxSize": 80.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-04-25",
-    "picture": "Long-SnoutedPipefish13"
+    "picture": "Long-SnoutedPipefish13",
+    "size": 52.5
   },
   {
-    "title": "Herring",
-    "race": "Atlantic",
+    "title": "Atlantic Herring",
+    "breed": {
+      "name": "Herring",
+      "minSize": 10.0,
+      "maxSize": 40.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-05-18",
-    "picture": "Pangasius13"
+    "picture": "Pangasius13",
+    "size": 20.0
   },
   {
-    "title": "Anchovy",
-    "race": "European",
+    "title": "European Anchovy",
+    "breed": {
+      "name": "Anchovy",
+      "minSize": 5.0,
+      "maxSize": 15.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-06-02",
-    "picture": "Picture1021"
+    "picture": "Picture1021",
+    "size": 10.2
   },
   {
-    "title": "Halibut",
-    "race": "Pacific",
+    "title": "Pacific Halibut",
+    "breed": {
+      "name": "Halibut",
+      "minSize": 50.0,
+      "maxSize": 200.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-07-07",
-    "picture": "Bangus91"
+    "picture": "Bangus91",
+    "size": 120.0
   },
   {
-    "title": "Sardine",
-    "race": "Atlantic",
+    "title": "Atlantic Sardine",
+    "breed": {
+      "name": "Sardine",
+      "minSize": 5.0,
+      "maxSize": 25.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-08-12",
-    "picture": "Gold Fish42"
+    "picture": "Gold Fish42",
+    "size": 12.5
   },
   {
-    "title": "Flounder",
-    "race": "Summer",
+    "title": "Summer Flounder",
+    "breed": {
+      "name": "Flounder",
+      "minSize": 10.0,
+      "maxSize": 60.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-09-01",
-    "picture": "Picture1020"
+    "picture": "Picture1020",
+    "size": 45.0
   },
   {
-    "title": "Grouper",
-    "race": "Black",
+    "title": "Black Grouper",
+    "breed": {
+      "name": "Grouper",
+      "minSize": 40.0,
+      "maxSize": 150.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-05-20",
-    "picture": "Pangasius12"
+    "picture": "Pangasius12",
+    "size": 80.0
   },
   {
-    "title": "Marlin",
-    "race": "Blue",
+    "title": "Blue Marlin",
+    "breed": {
+      "name": "Marlin",
+      "minSize": 100.0,
+      "maxSize": 300.0,
+      "fishable": true,
+      "storageTemp": "-1 à 1°C"
+    },
     "date": "2023-06-25",
-    "picture": "Long-SnoutedPipefish12"
+    "picture": "Long-SnoutedPipefish12",
+    "size": 250.5
   },
   {
-    "title": "Swordfish",
-    "race": "Broadbill",
+    "title": "Broadbill Swordfish",
+    "breed": {
+      "name": "Swordfish",
+      "minSize": 100.0,
+      "maxSize": 400.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-07-10",
-    "picture": "Bangus96"
+    "picture": "Bangus96",
+    "size": 320.0
   },
   {
-    "title": "Eel",
-    "race": "American",
+    "title": "American Eel",
+    "breed": {
+      "name": "Eel",
+      "minSize": 20.0,
+      "maxSize": 100.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-08-15",
-    "picture": "Gold Fish45"
+    "picture": "Gold Fish45",
+    "size": 75.2
   },
   {
-    "title": "Pollock",
-    "race": "Alaskan",
+    "title": "Alaskan Pollock",
+    "breed": {
+      "name": "Pollock",
+      "minSize": 40.0,
+      "maxSize": 100.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-04-30",
-    "picture": "Long-SnoutedPipefish13"
+    "picture": "Long-SnoutedPipefish13",
+    "size": 55.0
   },
   {
-    "title": "Tilapia",
-    "race": "Nile",
+    "title": "Nile Tilapia",
+    "breed": {
+      "name": "Tilapia",
+      "minSize": 10.0,
+      "maxSize": 50.0,
+      "fishable": true,
+      "storageTemp": "0-4°C"
+    },
     "date": "2023-05-25",
-    "picture": "Pangasius13"
+    "picture": "Pangasius13",
+    "size": 20.0
   },
   {
-    "title": "Sturgeon",
-    "race": "White",
+    "title": "White Sturgeon",
+    "breed": {
+      "name": "Sturgeon",
+      "minSize": 50.0,
+      "maxSize": 200.0,
+      "fishable": true,
+      "storageTemp": "-1 à 1°C"
+    },
     "date": "2023-06-05",
-    "picture": "Picture1021"
+    "picture": "Picture1021",
+    "size":
+
+ 150.5
   }
 ]
