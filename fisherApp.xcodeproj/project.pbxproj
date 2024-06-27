@@ -24,6 +24,8 @@
 		2404684C2C2C486A00EC9935 /* TakePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404684B2C2C486A00EC9935 /* TakePictureView.swift */; };
 		2404684E2C2C4B8100EC9935 /* FishRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404684D2C2C4B8100EC9935 /* FishRowView.swift */; };
 		240468502C2C595C00EC9935 /* StatProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404684F2C2C595C00EC9935 /* StatProtocol.swift */; };
+		240468542C2D952E00EC9935 /* FishSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468532C2D952E00EC9935 /* FishSamples.swift */; };
+		240468562C2D979A00EC9935 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468552C2D979A00EC9935 /* PreviewContainer.swift */; };
 		24F0A7732C21B1B100FDBAED /* fisherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0A7722C21B1B100FDBAED /* fisherAppApp.swift */; };
 		24F0A7772C21B1B300FDBAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F0A7762C21B1B300FDBAED /* Assets.xcassets */; };
 		24F0A77A2C21B1B300FDBAED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F0A7792C21B1B300FDBAED /* Preview Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		2404684B2C2C486A00EC9935 /* TakePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureView.swift; sourceTree = "<group>"; };
 		2404684D2C2C4B8100EC9935 /* FishRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishRowView.swift; sourceTree = "<group>"; };
 		2404684F2C2C595C00EC9935 /* StatProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatProtocol.swift; sourceTree = "<group>"; };
+		240468532C2D952E00EC9935 /* FishSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishSamples.swift; sourceTree = "<group>"; };
+		240468552C2D979A00EC9935 /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		24F0A76F2C21B1B100FDBAED /* fisherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fisherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F0A7722C21B1B100FDBAED /* fisherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fisherAppApp.swift; sourceTree = "<group>"; };
 		24F0A7762C21B1B300FDBAED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		240468362C2979C100EC9935 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				240468572C2D987900EC9935 /* Sample */,
 				240468372C2979EB00EC9935 /* dataFish.json */,
 			);
 			path = Data;
@@ -147,6 +152,15 @@
 			path = FishDetail;
 			sourceTree = "<group>";
 		};
+		240468572C2D987900EC9935 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				240468532C2D952E00EC9935 /* FishSamples.swift */,
+				240468552C2D979A00EC9935 /* PreviewContainer.swift */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
 		24F0A7662C21B1B100FDBAED = {
 			isa = PBXGroup;
 			children = (
@@ -166,11 +180,11 @@
 		24F0A7712C21B1B100FDBAED /* fisherApp */ = {
 			isa = PBXGroup;
 			children = (
+				24F0A7722C21B1B100FDBAED /* fisherAppApp.swift */,
 				240468412C29BBB600EC9935 /* Components */,
 				240468362C2979C100EC9935 /* Data */,
 				240467FF2C22C7BE00EC9935 /* Models */,
 				240467E22C21CA5900EC9935 /* Assets */,
-				24F0A7722C21B1B100FDBAED /* fisherAppApp.swift */,
 				240467E02C21C9F100EC9935 /* Utilities */,
 				240467DB2C21C9EA00EC9935 /* Views */,
 				240467D42C21C9E300EC9935 /* Resources */,
@@ -258,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				240468562C2D979A00EC9935 /* PreviewContainer.swift in Sources */,
 				240468092C2462FC00EC9935 /* FishDetector.mlmodel in Sources */,
 				240468432C29BBF000EC9935 /* InformationIcon.swift in Sources */,
 				2404684A2C2C417700EC9935 /* ModaleTestView.swift in Sources */,
@@ -271,6 +286,7 @@
 				2404680B2C24670B00EC9935 /* AnalyseView.swift in Sources */,
 				240468112C25649200EC9935 /* FishDetectorModel.swift in Sources */,
 				240468052C24315B00EC9935 /* CameraView.swift in Sources */,
+				240468542C2D952E00EC9935 /* FishSamples.swift in Sources */,
 				24F0A7732C21B1B100FDBAED /* fisherAppApp.swift in Sources */,
 				2404683E2C299A6F00EC9935 /* Breed.swift in Sources */,
 				2404684E2C2C4B8100EC9935 /* FishRowView.swift in Sources */,

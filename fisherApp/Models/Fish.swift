@@ -17,6 +17,7 @@ struct Fish: Identifiable, Codable, Hashable {
     var breed: Breed
     var size: Double
     let date: String
+    var isFavorite: Bool?
     let picture: String
     var stats : [Stat] {
         [ Stat( statName: "Pêcher", statValue: date, iconValue: "calendar"),
@@ -37,6 +38,7 @@ struct Fish: Identifiable, Codable, Hashable {
         case breed
         case size
         case date
+        case isFavorite
         case picture
     }
     
@@ -47,13 +49,14 @@ struct Fish: Identifiable, Codable, Hashable {
 }
 
 @Model 
-final class FishSaved_Model {
+final class FishSaved_Model: ObservableObject {
     var id = UUID()
     var title: String
     var breed: BreedSaved_Model
     var size: Double
     let date: String
     let picture: String
+    var isFavorite: Bool
     var stats : [Stat] {
         [ Stat( statName: "Pêcher", statValue: date, iconValue: "calendar"),
           Stat(statName: "Espèce", statValue: breed.name, iconValue: "pawprint.circle.fill"),
@@ -65,12 +68,13 @@ final class FishSaved_Model {
     }
     
     
-    init(id: UUID = UUID(), title: String, breed: BreedSaved_Model, size: Double, date: String, picture: String) {
+    init(id: UUID = UUID(), title: String, breed: BreedSaved_Model, size: Double, date: String, isFavorite: Bool, picture: String ) {
         self.id = id
         self.title = title
         self.breed = breed
         self.size = size
         self.date = date
+        self.isFavorite = isFavorite
         self.picture = picture
     }
 }

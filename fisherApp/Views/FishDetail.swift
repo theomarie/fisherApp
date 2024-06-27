@@ -89,7 +89,7 @@ struct FishDetail: View {
 struct FishDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            FishDetail(fish: FishSaved_Model(title: "Patoche", breed: BreedSaved_Model(name: "Yellowfin", minSize: 11.1, maxSize: 20.2, fishable: true, storageTemp: "0-5°C"), size: 13.8, date: "2023-07-20", picture: "Bangus91"))
+            FishDetail(fish: FishSaved_Model(title: "Patoche", breed: BreedSaved_Model(name: "Yellowfin", minSize: 11.1, maxSize: 20.2, fishable: true, storageTemp: "0-5°C"), size: 13.8, date: "2023-07-20", isFavorite: false, picture: "Bangus91"))
         }
     }
 }

@@ -10,26 +10,45 @@ import SwiftData
 
 @main
 struct fisherAppApp:  App {
-    
     let container: ModelContainer
+    var body: some Scene {
+        WindowGroup {
+         HomeView()
+        }
+        .modelContainer(container)
+    }
         
         init() {
+            
+            
+            let schema = Schema([FishSaved_Model.self, BreedSaved_Model.self])
+            let config = ModelConfiguration("MyFish",  schema: schema)
+            do {
+                container = try ModelContainer(for: schema, configurations: config)
+              //  initializeSwiftDataModels(context: context) // init database with jsonFile
+            } catch {
+                fatalError("could not configure the container")
+            }
+            
+            print(URL.applicationSupportDirectory.path(percentEncoded: false))
+            
+            /*
+            let config = ModelConfiguration(url: URL.documentsDirectory.appending(path: "MyFishs.store"))
             do {
                 container = try ModelContainer(for: FishSaved_Model.self, BreedSaved_Model.self)
-                let context = container.mainContext
-                
-              //  initializeSwiftDataModels(context: context)
+              //  initializeSwiftDataModels(context: context) // init database with jsonFile
             } catch {
                 fatalError("Failed to create ModelContainer: \(error)")
             }
+            print(URL.documentsDirectory.path())
+             */
         }
-        
-        var body: some Scene {
-            WindowGroup {
-             HomeView()
-            }
-            .modelContainer(container)
-        }
+}
+       
+    
+    
+    
+    
     /*
     func initializeSwiftDataModels(context: ModelContext) {
         guard let fishArray = loadJSONData() else {
@@ -85,4 +104,4 @@ struct fisherAppApp:  App {
      */
     
     
-    }
+ 

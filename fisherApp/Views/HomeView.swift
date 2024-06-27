@@ -13,16 +13,20 @@ struct HomeView: View {
     @State private var searchText: String = ""
     @State private var showCamera = false
     @State var selectedImage: UIImage?
-    @Query var FishData: [FishSaved_Model]
+    @Query var fishData: [FishSaved_Model]
     
     
     
     var filteredFishes: [FishSaved_Model] {
         if searchText.isEmpty {
-            return FishData
+            return fishData
         } else {
-            return FishData.filter { $0.title.contains(searchText) || $0.breed.name.contains(searchText) }
+            return fishData.filter { $0.title.contains(searchText) || $0.breed.name.contains(searchText) }
         }
+    }
+    
+    func delete(at offsets: IndexSet) {
+        // delete the objects here
     }
      
 
@@ -57,7 +61,10 @@ struct HomeView: View {
 }
 
 
-
 #Preview {
-    HomeView()
+    let preview = Preview(FishSaved_Model.self)
+    preview.addExamples()
+    return HomeView()
+        .modelContainer(preview.container)
 }
+
