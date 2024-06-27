@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FishRowView: View {
-     var fish: Fish
+     var fish: FishSaved_Model
 
     
 
@@ -34,6 +34,6 @@ struct FishRowView: View {
     
 }
 
-#Preview {
-    FishRowView(fish: Fish(title: "Salmon red", breed: Breed(name: "Salmon", minSize: 22.1, maxSize: 43.3, fishable: true, storageTemp: "0-4°C"), size: 24, date: "2024-12-01", picture: "Gold Fish45"))
-}
+//#Preview {
+//    FishRowView(fish: Fish(title: "Salmon red", breed: Breed(name: "Salmon", minSize: 22.1, maxSize: 43.3, fishable: true, storageTemp: "0-4°C"), size: 24, date: "2024-12-01", picture: "Gold Fish45"))
+//}

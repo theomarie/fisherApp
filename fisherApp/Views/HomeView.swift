@@ -6,34 +6,33 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct HomeView: View {
     
     @State private var searchText: String = ""
-    @State private var fishes: [Fish] = []
     @State private var showCamera = false
     @State var selectedImage: UIImage?
-
+    @Query var FishData: [FishSaved_Model]
     
-    var filteredFishes: [Fish] {
+    
+    
+    var filteredFishes: [FishSaved_Model] {
         if searchText.isEmpty {
-            return fishes
+            return FishData
         } else {
-            return fishes.filter { $0.title.contains(searchText) || $0.breed.name.contains(searchText) }
+            return FishData.filter { $0.title.contains(searchText) || $0.breed.name.contains(searchText) }
         }
     }
+     
 
     var body: some View {
         NavigationStack {
-           
-        
              List(filteredFishes) { fish in
-                 let index = fishes.firstIndex(where: {$0.id == fish.id})
-                 NavigationLink(destination: FishDetail(fish:  $fishes[index!])) {
-                     FishRowView(fish: fish)
+                 NavigationLink(destination: FishDetail(fish:  fish)) {
+                     FishRowView(fish: fish )
                  }
              }
-            
             
             .searchable(text: $searchText, prompt: "Rechercher")
             .navigationBarTitle("Historique", displayMode: .large)
@@ -54,24 +53,10 @@ struct HomeView: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .onAppear(perform: loadFishes)
-    }
-    
-    func loadFishes() {
-        guard let url = Bundle.main.url(forResource: "dataFish", withExtension: "json") else {
-            print("JSON file not found")
-            return
-        }
-        
-        do {
-            let data = try Data(contentsOf: url)
-            let decoder = JSONDecoder()
-            fishes = try decoder.decode([Fish].self, from: data)
-        } catch {
-            print("Error loading JSON: \(error)")
-        }
     }
 }
+
+
 
 #Preview {
     HomeView()

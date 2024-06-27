@@ -11,7 +11,7 @@ import SwiftUI
 
 struct FishDetail: View {
     
-    @Binding var fish: Fish
+    var fish: FishSaved_Model
     
     var body: some View {
         ScrollView {
@@ -71,7 +71,8 @@ struct FishDetail: View {
                         .padding(.horizontal)
                     
                     VStack(alignment: .leading, spacing: 5) {
-                        ForEach(fish.breed.statsBreed) { stat in
+                        ForEach(fish.breed.statsBreed) {
+                            stat in
                             ActivityView(activityName: stat.statName, activityValue: stat.statValue, iconValue: stat.iconValue)
                         }
                     }
@@ -88,7 +89,7 @@ struct FishDetail: View {
 struct FishDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            FishDetail(fish: .constant(Fish(title: "Patoche", breed: Breed(name: "Yellowfin", minSize: 11.1, maxSize: 20.2, fishable: true, storageTemp: "0-5°C"), size: 13.8, date: "2023-07-20", picture: "Bangus91")))
+            FishDetail(fish: FishSaved_Model(title: "Patoche", breed: BreedSaved_Model(name: "Yellowfin", minSize: 11.1, maxSize: 20.2, fishable: true, storageTemp: "0-5°C"), size: 13.8, date: "2023-07-20", picture: "Bangus91"))
         }
     }
 }
