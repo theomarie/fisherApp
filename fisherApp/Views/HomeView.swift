@@ -17,19 +17,15 @@ struct HomeView: View {
     @State private var showFavoritesOnly = false
     @State private var sortOrder: SortOrder = .none
     
-    enum SortOrder {
-        case none, dateAscending, dateDescending
-    }
-    /*
-     var filteredFishes: [FishSaved_Model] {
-     if searchText.isEmpty {
-     return fishData
-     } else {
-     return fishData.filter { $0.title.contains(searchText) || $0.breed.name.contains(searchText) }
-     }
-     }
-     */
-    
+    enum SortOrder: String, CaseIterable, Identifiable {
+        
+           case none = "Aucun tri"
+           case dateAscending = "Date (Ascendant)"
+           case dateDescending = "Date (Descendant)"
+        var id: Self { self }
+
+       }
+   
     var filteredFishes: [FishSaved_Model] {
         var result = fishData
         
@@ -66,41 +62,67 @@ struct HomeView: View {
                 }
                 .swipeActions {
                     Button {
-                        fish.isFavorite.toggle()
+                        withAnimation {
+                            fish.isFavorite.toggle()
+                            print(fish.isFavorite)
+                        }
+                        
                     } label: {
-                        Label("Favorite", systemImage: fish.isFavorite ? "heart.fill" : "heart")
+                        Label("Favorite", systemImage: fish.isFavorite ? "heart.slash.fill" : "heart")
+                        
+                        
                     }
-                    .tint(.red)
+                    .tint(.accent)
                 }
             }
             
             .searchable(text: $searchText, prompt: "Rechercher")
             .navigationBarTitle("Historique", displayMode: .large)
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {
-                        self.showCamera.toggle()
-                    }) {
-                        Image(systemName: "camera")
-                    }.fullScreenCover(isPresented: $showCamera) {
-                        accessCameraView(selectedImage: self.$selectedImage)
-                            .navigationDestination(item: $selectedImage) { image in
-                                AnalyseView(fishImg: $selectedImage)
-                            }
-                        
+                ToolbarItem(placement: .topBarLeading) {
+                                    Menu {
+                                        Toggle(isOn: $showFavoritesOnly) {
+                                            Label("Favoris uniquement", systemImage: "heart.fill")
+                                        }
+                                        
+                                        Menu("Trier par") {
+                                            Picker("Trier par", selection: $sortOrder) {
+                                                ForEach(SortOrder.allCases) { order in
+                                                    Text(order.rawValue).tag(order)
+                                                }
+                                            }
+                                        }
+                                    } label: {
+                                        Image(systemName: "line.3.horizontal.decrease.circle")
+                                    }
+                                }
+                    
+                    
+                   
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(action: {
+                            self.showCamera.toggle()
+                        }) {
+                            Image(systemName: "camera")
+                        }.fullScreenCover(isPresented: $showCamera) {
+                            accessCameraView(selectedImage: self.$selectedImage)
+                                .navigationDestination(item: $selectedImage) { image in
+                                    AnalyseView(fishImg: $selectedImage)
+                                }
+                            
+                        }
                     }
                 }
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
-}
-
-
-#Preview {
-    let preview = Preview(FishSaved_Model.self)
-    preview.addExamples()
-    return HomeView()
-        .modelContainer(preview.container)
-}
-
+    
+    
+    #Preview {
+        let preview = Preview(FishSaved_Model.self)
+        preview.addExamples()
+        return HomeView()
+            .modelContainer(preview.container)
+    }
+    

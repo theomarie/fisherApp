@@ -50,7 +50,7 @@ struct Fish: Identifiable, Codable, Hashable {
 
 @Model 
 final class FishSaved_Model: ObservableObject {
-    var id = UUID()
+    @Attribute(.unique) var id: UUID
     var title: String
     var breed: BreedSaved_Model
     var size: Double
