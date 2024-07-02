@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct FishRowView: View {
-     var fish: FishSaved_Model
-
+    var fish: FishSaved_Model
     
-
+    
+    
     var body: some View {
         HStack {
-            Image(fish.picture)
-                .resizable()
+            Image(uiImage: pictureModelToImage(entryImage: fish.picture))
+                .resizable().aspectRatio(contentMode: .fit)
                 .frame(width: 50, height: 50)
                 .clipShape(Circle())
             VStack(alignment: .leading) {
@@ -28,11 +28,13 @@ struct FishRowView: View {
             }
             
         }
-    
+        
     }
     
     
 }
+
+
 
 //#Preview {
 //    FishRowView(fish: Fish(title: "Salmon red", breed: Breed(name: "Salmon", minSize: 22.1, maxSize: 43.3, fishable: true, storageTemp: "0-4°C"), size: 24, date: "2024-12-01", picture: "Gold Fish45"))

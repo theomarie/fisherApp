@@ -12,36 +12,34 @@ import SwiftUI
 struct FishDetail: View {
     
     var fish: FishSaved_Model
-    
+    //var isSafe: bool = fish.size >= fish.breed.minSize && fish.size <= fish.breed.maxSize && fish.breed?.fishable
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 // Profile Picture and Name
                 HStack {
-                  
-                        
-                        Image(fish.picture)
-                            .resizable()
-                            .frame(minHeight: 250, idealHeight: 200)
-                            .aspectRatio(contentMode: .fill)
-                            .overlay(content: {
-                                GeometryReader { geometry in
-                                    VStack {
+                    
+                    Image(uiImage: pictureModelToImage(entryImage: fish.picture))
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .overlay(content: {
+                            GeometryReader { geometry in
+                                VStack {
+                                    Spacer()
+                                    HStack {
                                         Spacer()
-                                        HStack {
-                                            Spacer()
-                                            Text(fish.size >= fish.breed.minSize && fish.size <= fish.breed.maxSize && fish.breed.fishable ? "Gardable" : "À Libérer")
-                                                .font(.headline)
-                                                .padding(8)
-                                                .background(fish.size >= fish.breed.minSize && fish.size <= fish.breed.maxSize && fish.breed.fishable ? Color.green : Color.red)
-                                                .cornerRadius(10)
-                                                .foregroundColor(.white)
-                                                .padding([.bottom, .trailing], 10)
-                                        }
+                                        Text(fish.size >= fish.breed.minSize && fish.size <= fish.breed.maxSize && fish.breed.fishable ? "Gardable" : "À Libérer")
+                                            .font(.headline)
+                                            .padding(8)
+                                            .background(fish.size >= fish.breed.minSize && fish.size <= fish.breed.maxSize && fish.breed.fishable ? Color.green : Color.red)
+                                            .cornerRadius(10)
+                                            .foregroundColor(.white)
+                                            .padding([.bottom, .trailing], 10)
                                     }
                                 }
-                            })
-                            
+                            }
+                        })
+                    
                     
                 }
                 

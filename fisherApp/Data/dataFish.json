@@ -1,55 +1,56 @@
 [
     {
-        "title": "King Salmon",
+        "title": "King Bangus",
         "breed": {
-            "name": "Salmon",
-            "minSize": 20.0,
-            "maxSize": 150.0,
+            "name": "Bangus",
+            "minSize": 100.0,
+            "maxSize": 400.0,
             "fishable": true,
             "storageTemp": "0-4°C"
         },
         "date": "2023-06-15",
-        "fishable": true,    "picture": "Bangus91",
+        "picture": "Bangus91",
         "size": 45.5
     },
     {
-        "title": "Giant Tuna",
+        "title": "Gold Fish Tuna",
         "breed": {
-            "name": "Tuna",
-            "minSize": 30.0,
-            "maxSize": 250.0,
+            "name": "Gold Fish",
+            "minSize": 5.0,
+            "maxSize": 50.0,
             "fishable": true,
             "storageTemp": "0-5°C"
         },
         "date": "2023-07-20",
-        "fishable": true,    "picture": "Gold Fish42",
+        "picture": "Gold Fish42",
         "size": 75.0
     },
     {
-        "title": "Pacific Cod",
+        "title": "Big Head carp 80",
         "breed": {
-            "name": "Cod",
+            "name": "Big Head carp",
             "minSize": 50.0,
             "maxSize": 180.0,
             "fishable": true,
             "storageTemp": "-1 à 1°C"
         },
+        "isFavorite": false,
         "date": "2023-05-12",
-        "fishable": true,    "picture": "Picture1020",
+        "picture": "Big Head Carp 80",
         "size": 44.2
     },
     {
-        "title": "Rainbow Trout",
+        "title": "climbing perch 33",
         "breed": {
-            "name": "Trout",
-            "minSize": 15.0,
-            "maxSize": 70.0,
+            "name": "climbing perch",
+            "minSize": 5.0,
+            "maxSize": 20.0,
             "fishable": false,
             "storageTemp": "0-4°C"
         },
         "date": "2023-08-01",
-        "fishable": true,    "picture": "Pangasius12",
-        "size": 40.0
+        "picture": "climbing perch (33)",
+        "size": 10.0
     },
     {
         "title": "Largemouth Bass",
@@ -61,33 +62,33 @@
             "storageTemp": "0-4°C"
         },
         "date": "2023-06-30",
-        "fishable": true,    "picture": "Long-SnoutedPipefish12",
+        "picture": "Long-SnoutedPipefish12",
         "size": 55.3
     },
     {
-        "title": "Channel Catfish",
+        "title": "Channel Bangus",
         "breed": {
-            "name": "Catfish",
-            "minSize": 30.0,
-            "maxSize": 100.0,
+            "name": "Bangus",
+            "minSize": 100.0,
+            "maxSize": 400.0,
             "fishable": true,
             "storageTemp": "0-4°C"
         },
         "date": "2023-07-15",
-        "fishable": true,    "picture": "Bangus96",
+        "picture": "Bangus96",
         "size": 22.2
     },
     {
-        "title": "King Mackerel",
+        "title": "King Gold Fish",
         "breed": {
-            "name": "Mackerel",
-            "minSize": 40.0,
-            "maxSize": 100.0,
+            "name": "Gold Fish",
+            "minSize": 5.0,
+            "maxSize": 50.0,
             "fishable": true,
-            "storageTemp": "0-4°C"
+            "storageTemp": "0-5°C"
         },
         "date": "2023-09-05",
-        "fishable": true,    "picture": "Gold Fish45",
+        "picture": "Gold Fish45",
         "size": 48.0
     },
     {
@@ -100,7 +101,7 @@
             "storageTemp": "0-4°C"
         },
         "date": "2023-04-25",
-        "fishable": true,    "picture": "Long-SnoutedPipefish13",
+        "picture": "Long-SnoutedPipefish13",
         "size": 52.5
     },
     {
@@ -113,7 +114,7 @@
             "storageTemp": "0-4°C"
         },
         "date": "2023-05-18",
-        "fishable": true,    "picture": "Pangasius13",
+        "picture": "Pangasius13",
         "size": 20.0
     },
     {
@@ -126,7 +127,7 @@
             "storageTemp": "0-4°C"
         },
         "date": "2023-06-02",
-        "fishable": true,    "picture": "Picture1021",
+        "picture": "Picture1021",
         "size": 10.2
     },
     {
@@ -139,20 +140,20 @@
             "storageTemp": "0-4°C"
         },
         "date": "2023-07-07",
-        "fishable": true,    "picture": "Bangus91",
+        "picture": "Bangus91",
         "size": 120.0
     },
     {
-        "title": "Atlantic Sardine",
+        "title": "Atlantic Gold Fish",
         "breed": {
-            "name": "Sardine",
+            "name": "Gold Fish",
             "minSize": 5.0,
-            "maxSize": 25.0,
+            "maxSize": 50.0,
             "fishable": true,
-            "storageTemp": "0-4°C"
+            "storageTemp": "0-5°C"
         },
         "date": "2023-08-12",
-        "fishable": true,    "picture": "Gold Fish42",
+        "picture": "Gold Fish42",
         "size": 12.5
     },
     {
@@ -165,7 +166,8 @@
             "storageTemp": "0-4°C"
         },
         "date": "2023-09-01",
-        "fishable": true,    "picture": "Picture1020",
+        "picture": "Picture1020",
+        "isFavorite": false,
         "size": 45.0
     },
     {
@@ -178,7 +180,7 @@
             "storageTemp": "0-4°C"
         },
         "date": "2023-05-20",
-        "fishable": true,    "picture": "Pangasius12",
+        "picture": "Pangasius12",
         "size": 80.0
     },
     {
@@ -190,34 +192,37 @@
             "fishable": true,
             "storageTemp": "-1 à 1°C"
         },
+        "isFavorite": false,
         "date": "2023-06-25",
-        "fishable": true,    "picture": "Long-SnoutedPipefish12",
+        "picture": "Long-SnoutedPipefish12",
         "size": 250.5
     },
     {
-        "title": "Broadbill Swordfish",
+        "title": "Broadbill Bangus",
         "breed": {
-            "name": "Swordfish",
+            "name": "Bangus",
             "minSize": 100.0,
             "maxSize": 400.0,
             "fishable": true,
             "storageTemp": "0-4°C"
         },
+        "isFavorite": false,
         "date": "2023-07-10",
-        "fishable": true,    "picture": "Bangus96",
+        "picture": "Bangus96",
         "size": 320.0
     },
     {
-        "title": "American Eel",
+        "title": "Lost Gold",
         "breed": {
-            "name": "Eel",
-            "minSize": 20.0,
-            "maxSize": 100.0,
+            "name": "Gold Fish",
+            "minSize": 5.0,
+            "maxSize": 50.0,
             "fishable": true,
-            "storageTemp": "0-4°C"
+            "storageTemp": "0-5°C"
         },
+        "isFavorite": false,
         "date": "2023-08-15",
-        "fishable": true,    "picture": "Gold Fish45",
+        "picture": "Gold Fish45",
         "size": 75.2
     },
     {
@@ -260,6 +265,6 @@
         "date": "2023-06-05",
         "isFavorite": false,
         "picture": "Picture1021",
-        "size":150.5
+        "size": 150.5
     }
 ]

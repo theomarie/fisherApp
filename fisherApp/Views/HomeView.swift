@@ -9,23 +9,25 @@ import SwiftUI
 import SwiftData
 
 struct HomeView: View {
+    @Environment(\.modelContext) var context
     
     @State private var searchText: String = ""
     @State private var showCamera = false
     @State var selectedImage: UIImage?
     @Query var fishData: [FishSaved_Model]
+    
     @State private var showFavoritesOnly = false
     @State private var sortOrder: SortOrder = .none
     
     enum SortOrder: String, CaseIterable, Identifiable {
         
-           case none = "Aucun tri"
-           case dateAscending = "Date (Ascendant)"
-           case dateDescending = "Date (Descendant)"
+        case none = "Aucun tri"
+        case dateAscending = "Date (Ascendant)"
+        case dateDescending = "Date (Descendant)"
         var id: Self { self }
-
-       }
-   
+        
+    }
+    
     var filteredFishes: [FishSaved_Model] {
         var result = fishData
         
@@ -34,7 +36,7 @@ struct HomeView: View {
         }
         
         if !searchText.isEmpty {
-            result = result.filter { $0.title.contains(searchText) || $0.breed.name.contains(searchText) }
+            result = result.filter { $0.title.contains(searchText) || (($0.breed.name.contains(searchText)) != nil) }
         }
         
         switch sortOrder {
@@ -48,12 +50,7 @@ struct HomeView: View {
         
         return result
     }
-    
-    func delete(at offsets: IndexSet) {
-        // delete the objects here
-    }
-    
-    
+
     var body: some View {
         NavigationStack {
             List(filteredFishes) { fish in
@@ -61,6 +58,10 @@ struct HomeView: View {
                     FishRowView(fish: fish )
                 }
                 .swipeActions {
+                    Button("Delete", systemImage: "trash", role: .destructive) {
+                                    context.delete(fish)
+                                }
+                    .tint(.red)
                     Button {
                         withAnimation {
                             fish.isFavorite.toggle()
@@ -69,10 +70,9 @@ struct HomeView: View {
                         
                     } label: {
                         Label("Favorite", systemImage: fish.isFavorite ? "heart.slash.fill" : "heart")
-                        
-                        
                     }
                     .tint(.accent)
+                    
                 }
             }
             
@@ -80,49 +80,50 @@ struct HomeView: View {
             .navigationBarTitle("Historique", displayMode: .large)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                                    Menu {
-                                        Toggle(isOn: $showFavoritesOnly) {
-                                            Label("Favoris uniquement", systemImage: "heart.fill")
-                                        }
-                                        
-                                        Menu("Trier par") {
-                                            Picker("Trier par", selection: $sortOrder) {
-                                                ForEach(SortOrder.allCases) { order in
-                                                    Text(order.rawValue).tag(order)
-                                                }
-                                            }
-                                        }
-                                    } label: {
-                                        Image(systemName: "line.3.horizontal.decrease.circle")
-                                    }
-                                }
-                    
-                    
-                   
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button(action: {
-                            self.showCamera.toggle()
-                        }) {
-                            Image(systemName: "camera")
-                        }.fullScreenCover(isPresented: $showCamera) {
-                            accessCameraView(selectedImage: self.$selectedImage)
-                                .navigationDestination(item: $selectedImage) { image in
-                                    AnalyseView(fishImg: $selectedImage)
-                                }
-                            
+                    Menu {
+                        Toggle(isOn: $showFavoritesOnly) {
+                            Label("Favoris uniquement", systemImage: "heart.fill")
                         }
+                        
+                        Menu("Trier par") {
+                            Picker("Trier par", selection: $sortOrder) {
+                                ForEach(SortOrder.allCases) { order in
+                                    Text(order.rawValue).tag(order)
+                                }
+                            }
+                        }
+                    } label: {
+                        Image(systemName: "line.3.horizontal.decrease.circle")
                     }
                 }
+                
+                
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                                    Button(action: {
+                                        self.showCamera.toggle()
+                                    }) {
+                                        Image(systemName: "camera")
+                                    }
+                                    .fullScreenCover(isPresented: $showCamera) {
+                                        accessCameraView(selectedImage: self.$selectedImage)
+                                            .ignoresSafeArea()
+                                    }
+                                }
+                            }
+                            .navigationDestination(item: $selectedImage) { image in
+                                AnalyseView(fishImg: $selectedImage, showCamera: $showCamera)
             }
-            .navigationViewStyle(StackNavigationViewStyle())
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
-    
-    
-    #Preview {
-        let preview = Preview(FishSaved_Model.self)
-        preview.addExamples()
-        return HomeView()
-            .modelContainer(preview.container)
-    }
-    
+}
+
+
+#Preview {
+    let preview = Preview(FishSaved_Model.self)
+    preview.addExamples()
+    return HomeView()
+        .modelContainer(preview.container)
+}
+

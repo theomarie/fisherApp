@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		240468052C24315B00EC9935 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468042C24315B00EC9935 /* CameraView.swift */; };
 		240468092C2462FC00EC9935 /* FishDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 240468082C2462FC00EC9935 /* FishDetector.mlmodel */; };
 		2404680B2C24670B00EC9935 /* AnalyseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404680A2C24670B00EC9935 /* AnalyseView.swift */; };
 		2404680F2C247B1B00EC9935 /* ImageToPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404680E2C247B1B00EC9935 /* ImageToPixelBuffer.swift */; };
@@ -26,13 +25,13 @@
 		240468502C2C595C00EC9935 /* StatProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404684F2C2C595C00EC9935 /* StatProtocol.swift */; };
 		240468542C2D952E00EC9935 /* FishSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468532C2D952E00EC9935 /* FishSamples.swift */; };
 		240468562C2D979A00EC9935 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468552C2D979A00EC9935 /* PreviewContainer.swift */; };
+		240468732C32F7F000EC9935 /* PictureTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240468722C32F7F000EC9935 /* PictureTools.swift */; };
 		24F0A7732C21B1B100FDBAED /* fisherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0A7722C21B1B100FDBAED /* fisherAppApp.swift */; };
 		24F0A7772C21B1B300FDBAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F0A7762C21B1B300FDBAED /* Assets.xcassets */; };
 		24F0A77A2C21B1B300FDBAED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F0A7792C21B1B300FDBAED /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		240468042C24315B00EC9935 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		240468082C2462FC00EC9935 /* FishDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FishDetector.mlmodel; sourceTree = "<group>"; };
 		2404680A2C24670B00EC9935 /* AnalyseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyseView.swift; sourceTree = "<group>"; };
 		2404680E2C247B1B00EC9935 /* ImageToPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToPixelBuffer.swift; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		2404684F2C2C595C00EC9935 /* StatProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatProtocol.swift; sourceTree = "<group>"; };
 		240468532C2D952E00EC9935 /* FishSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishSamples.swift; sourceTree = "<group>"; };
 		240468552C2D979A00EC9935 /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
+		240468722C32F7F000EC9935 /* PictureTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureTools.swift; sourceTree = "<group>"; };
 		24F0A76F2C21B1B100FDBAED /* fisherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fisherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F0A7722C21B1B100FDBAED /* fisherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fisherAppApp.swift; sourceTree = "<group>"; };
 		24F0A7762C21B1B300FDBAED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,7 +87,6 @@
 		240467DB2C21C9EA00EC9935 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				240468042C24315B00EC9935 /* CameraView.swift */,
 				2404680A2C24670B00EC9935 /* AnalyseView.swift */,
 				240468392C297CB000EC9935 /* HomeView.swift */,
 				240468492C2C417700EC9935 /* ModaleTestView.swift */,
@@ -102,6 +101,7 @@
 			children = (
 				2404680E2C247B1B00EC9935 /* ImageToPixelBuffer.swift */,
 				2404684F2C2C595C00EC9935 /* StatProtocol.swift */,
+				240468722C32F7F000EC9935 /* PictureTools.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -285,12 +285,12 @@
 				2404684C2C2C486A00EC9935 /* TakePictureView.swift in Sources */,
 				2404680B2C24670B00EC9935 /* AnalyseView.swift in Sources */,
 				240468112C25649200EC9935 /* FishDetectorModel.swift in Sources */,
-				240468052C24315B00EC9935 /* CameraView.swift in Sources */,
 				240468542C2D952E00EC9935 /* FishSamples.swift in Sources */,
 				24F0A7732C21B1B100FDBAED /* fisherAppApp.swift in Sources */,
 				2404683E2C299A6F00EC9935 /* Breed.swift in Sources */,
 				2404684E2C2C4B8100EC9935 /* FishRowView.swift in Sources */,
 				2404683C2C29818E00EC9935 /* Fish.swift in Sources */,
+				240468732C32F7F000EC9935 /* PictureTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
