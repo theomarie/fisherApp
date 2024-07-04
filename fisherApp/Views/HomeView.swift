@@ -36,7 +36,7 @@ struct HomeView: View {
         }
         
         if !searchText.isEmpty {
-            result = result.filter { $0.title.contains(searchText) || (($0.breed.name.contains(searchText)) != nil) }
+            result = result.filter { $0.title.contains(searchText)}
         }
         
         switch sortOrder {
