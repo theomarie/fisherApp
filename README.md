@@ -4,6 +4,21 @@
 
 FisherApp is an iOS application designed for both iPhone and iPad. Built using Swift and SwiftUI, this app helps you determine if a fish is legal to catch based on an image captured with your device's camera. By leveraging a machine learning model trained with Create ML and utilizing CoreML, FisherApp provides real-time identification and information about various fish species.
 
+
+## Demonstration
+
+Here are some screenshots and a demo video to showcase FisherApp:
+
+### Screenshots
+
+
+<img src="https://github.com/theomarie/fisherApp/blob/master/RepoMedia/home.PNG" alt="Home Screen" width="300"><img src="https://github.com/theomarie/fisherApp/blob/master/RepoMedia/analyse.PNG" alt="Analysis Screen" width="300"> <img src="https://github.com/theomarie/fisherApp/blob/master/RepoMedia/detail.PNG" alt="Detail Screen" width="300">
+
+
+### Demo Video
+
+[Watch the demo video](https://github.com/theomarie/fisherApp/blob/master/RepoMedia/Demo.mp4)
+
 ## Getting Started
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
