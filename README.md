@@ -44,11 +44,7 @@ Steps to install and set up the app:
     cd FisherApp
     open FisherApp.xcodeproj
     ```
-3. Install dependencies (if any):
-    ```bash
-    // Insert dependency installation steps here if applicable
-    ```
-4. Build and run the project on your iOS device or simulator.
+3. Build and run the project on your iOS device or simulator.
 
 You should see the FisherApp running on your device, ready to identify fish!
 
